@@ -25,12 +25,17 @@
         }
         h1 {
             margin-bottom: 1rem;
+            position: absolute;
+            top: 20px;
         }
         p {
             margin-bottom: 2rem;
+            position: absolute;
+            top: 80px;
+
         }
         .button {
-            background-color: #555; /* Medium grey buttons */
+            background-color: #8f8f8f; /* Medium grey buttons */
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -39,6 +44,15 @@
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            width: 125px;
+        }
+        .button-container {
+            display: flex;
+            position: absolute;
+            bottom: 50px;
+        }
+        .button:last-child {
+            left: 100px;
         }
         .button:hover {
             background-color: #777; /* Lighter grey on hover */
@@ -46,6 +60,8 @@
         .social-icons {
             font-size: 1.5rem;
             margin-top: 20px;
+            position: fixed;
+            bottom: 10px;
         }
         .social-icons a {
             color: #f4f4f4;
@@ -57,6 +73,7 @@
         @media (max-width: 768px) {
             body {
                 padding: 20px;
+                overflow-y: hidden;
             }
             .button {
                 padding: 8px 16px;
@@ -65,10 +82,12 @@
     </style>
 </head>
 <body>
-    <h1>Your Name</h1>
-    <p>Data Scientist & Machine Learning Enthusiast</p>
-    <a href="resume.pdf" class="button" download>Download Resume</a>
-    <a href="projects.html" class="button">View Projects</a>
+    <h1>Anirudh Sharma</h1>
+    <p>Data Scientist</p>
+    <div class="button-container">
+        <a href="resume.pdf" class="button" download>Resume</a>
+        <a href="projects.html" class="button">Projects</a>
+    </div>
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
