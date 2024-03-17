@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #5f514e; /* Dark background */
+            color: #f0f0f0; /* Light text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .project {
+            background-color: #353030; /* Slightly lighter dark background for project cards */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .project-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: whitesmoke;
+            text-decoration: none;
+        }
+        .project-description {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 20px;
+            }
+            .project-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Projects</h1>
+        <!-- Example Project 1 -->
+        <div class="project">
+            <a href="https://github.com/anirudhsharmaiitb/FIFA-2022-Qatar-WC-Prediction/blob/main/FIFA_22_World_Cup_Prediction.ipynb" class="project-title">FIFA 2022 World Cup Prediction</a>
+            <div class="project-description">Predicting winner of the Qatar 2022 FIFA World Cup using team stats and match performance.</div>
+        </div>
+        <!-- Example Project 2 -->
+        <div class="project">
+            <a href="project-link-2.html" class="project-title">Pair Trading Strategies</a>
+            <div class="project-description">Looked into stock market data to find pair trading opportunities</div>
+        </div>
+    </div>
+</body>
+</html>
