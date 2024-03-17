@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Your Personal Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #333; /* Dark grey background */
+            color: #f4f4f4; /* Light grey text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url('background2.png'); /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+        .button {
+            background-color: #555; /* Medium grey buttons */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #777; /* Lighter grey on hover */
+        }
+        .social-icons {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            color: #f4f4f4;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            color: #999; /* Lighter grey on hover */
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            .button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to my personal website!</h1>
-    <p>My name is Anirudh Sharma.</p>
-    <p><a href="resume.pdf" download>Click here to download my resume</a></p>
+    <h1>Your Name</h1>
+    <p>Data Scientist & Machine Learning Enthusiast</p>
+    <a href="resume.pdf" class="button" download>Download Resume</a>
+    <a href="projects.html" class="button">View Projects</a>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/your-github-username" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
 </body>
 </html>
