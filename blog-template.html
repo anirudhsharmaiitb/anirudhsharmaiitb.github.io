@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Title | Anirudh Sharma</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #f4f4f4;
+      background: #000;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-top: 40px;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .quote {
+      border-left: 4px solid #00ff99;
+      padding-left: 15px;
+      margin: 25px 0;
+      font-style: italic;
+      color: #bbb;
+    }
+
+    pre {
+      background: #111;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+
+    code {
+      font-family: "Fira Code", monospace;
+      font-size: 15px;
+      color: #00ff99;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: #00ff99;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <h1>Understanding AI Basics</h1>
+    <div class="meta">Published on Aug 10, 2025 · 5 min read</div>
+
+    <p>
+      Artificial Intelligence (AI) has become one of the most influential technologies
+      of the 21st century. From recommendation systems on Netflix to self-driving cars,
+      AI is everywhere.
+    </p>
+
+    <img src="assets/sample-blog-image.jpg" alt="AI illustration">
+
+    <h2>What is AI?</h2>
+    <p>
+      At its core, AI is about making machines mimic human intelligence — learning,
+      reasoning, and problem-solving.
+    </p>
+
+    <div class="quote">
+      "AI is not about replacing humans. It is about augmenting human capabilities."
+    </div>
+
+    <h3>Example: A Simple Python Program</h3>
+    <pre><code>
+def greet(name):
+    return f"Hello, {name}! Welcome to AI world."
+
+print(greet("Anirudh"))
+    </code></pre>
+
+    <p>
+      The above code is a simple demonstration, but in practice AI models involve
+      complex algorithms, data, and computing power.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      AI is rapidly evolving and will continue to shape industries. Understanding its
+      basics helps us appreciate its power and prepare for its future impact.
+    </p>
+
+    <a href="blogs.html" class="back-link">← Back to Blogs</a>
+  </main>
+
+  <script>
+    fetch("header.html")
+      .then(r => r.text())
+      .then(html => document.getElementById("header-placeholder").innerHTML = html)
+      .catch(err => console.error("Header load failed:", err));
+  </script>
+</body>
+</html>
