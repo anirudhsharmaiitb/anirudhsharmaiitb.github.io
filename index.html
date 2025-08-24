@@ -1,106 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anirudh Sharma Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #333; /* Dark grey background */
-            color: #f4f4f4; /* Light grey text */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            background-image: url('assets/background.png'); /* Replace with your image path */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        h1 {
-            margin-bottom: 1rem;
-            position: absolute;
-            top: 0px;
-            font-size: 50px;
-        }
-        p {
-            position: absolute;
-            top: 70px;
-            font-size: 30px;
-        }
-        .button {
-            background-color: #8f8f8f; /* Medium grey buttons */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            width: 125px;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        .button-container {
-            display: flex;
-            position: absolute;
-            bottom: 50px;
-        }
-        .button:hover {
-            background-color: #777; /* Lighter grey on hover */
-        }
-        .social-icons {
-            font-size: 1.7rem;
-            margin-top: 20px;
-            position: fixed;
-            bottom: 10px;
-        }
-        .social-icons a {
-            color: #f4f4f4;
-            margin: 0 10px;
-        }
-        .social-icons a:hover {
-            color: #999; /* Lighter grey on hover */
-        }
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-                overflow-y: hidden;
-            }
-            .button {
-                padding: 8px 16px;
-            }
-        }
-        @media screen and (max-width: 440px) {
-            h1 {  
-                font-size: 40px; 
-            }
-            p {  
-                font-size: 20px; 
-            }
-            .button {  
-                font-size: 15px; 
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anirudh Sharma Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #333;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: url('assets/background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-info h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+    .profile-info p {
+      margin: 5px 0 0;
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    nav a {
+      color: #f4f4f4;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #bbb;
+    }
+
+    /* Social inline */
+    .social-inline {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .social-inline a {
+      font-size: 18px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    /* Fullscreen Overlay */
+    .overlay {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.9);
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+    .overlay a {
+      font-size: 22px;
+      color: #f4f4f4;
+      text-decoration: none;
+      margin: 15px 0;
+    }
+    .overlay a:hover {
+      color: #bbb;
+    }
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 36px;
+      cursor: pointer;
+    }
+    .overlay .social-inline {
+      margin-top: 20px;
+    }
+    .overlay .social-inline a {
+      font-size: 24px;
+      margin: 0 12px;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* stick toward bottom */
+      text-align: center;
+      padding-bottom: 80px; /* adjust spacing from bottom */
+    }
+    .main-content p {
+      margin: 0;
+      font-size: 22px; /* control text size */
+      color: #eee;
+      max-width: 600px;
+    }
+    .inline-logo {
+      height: 25px;
+      vertical-align: middle;
+      margin-left: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .profile-info h1 {
+        font-size: 24px;
+      }
+      .profile-info p {
+        font-size: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Anirudh Sharma</h1>
-    <p>Data Scientist</p>
-    <div class="button-container">
-        <a href="assets/resume.pdf" class="button" download>Resume</a>
-        <a href="blogs.html" class="button">Blogs</a>
+  
+  <!-- Header -->
+  <header>
+    <div class="profile-info">
+      <h1>
+        Anirudh Sharma
+        <img src="assets/strawhat.png" alt="logo" class="inline-logo">
+      </h1>
+      <p>Data | Decisions | Business</p>
     </div>
-    <div class="social-icons">
+
+    <!-- Desktop Nav -->
+    <nav>
+      <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+      <a href="blogs.html">Blogs</a>
+      <div class="social-inline">
         <a href="https://www.linkedin.com/in/maverickcss/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/anirudhsharmaiitb" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" onclick="openMenu()">
+      <i class="fas fa-bars"></i>
     </div>
+  </header>
+
+  <!-- Mobile Overlay -->
+  <div id="mobileMenu" class="overlay">
+    <span class="closebtn" onclick="closeMenu()">&times;</span>
+    <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+    <a href="blogs.html">Blogs</a>
+    <div class="social-inline">
+      <a href="https://www.linkedin.com/in/maverickcss/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/anirudhsharmaiitb" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <p>👋 Welcome to my website. Explore my resume, blogs, and projects.</p>
+  </div>
+
+  <script>
+    function openMenu() {
+      document.getElementById("mobileMenu").style.display = "flex";
+    }
+    function closeMenu() {
+      document.getElementById("mobileMenu").style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
