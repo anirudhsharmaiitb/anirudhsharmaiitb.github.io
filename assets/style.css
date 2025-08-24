@@ -1,25 +1,43 @@
-/* Make homepage non-scrollable */
+/* Full-page background */
 html, body {
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-  }
-  
-  /* Homepage styling */
-  h1 {
-    font-weight: 600;
-  }
-  
-  .btn {
-    font-size: 1.1rem;
-    padding: 12px;
-    border-radius: 12px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .btn:hover {
-    background-color: black;
-    color: white;
-  }
-  
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: white;
+}
+
+/* Gradient background */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: cover;
+}
+
+/* Heading */
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+/* Buttons */
+.btn {
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Social links in top corner */
+.social-links .btn {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
