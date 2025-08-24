@@ -89,8 +89,6 @@
   </style>
 </head>
 <body>
-  <div id="header-placeholder"></div>
-
   <main>
     <h1>Understanding AI Basics</h1>
     <div class="meta">Published on Aug 10, 2025 · 5 min read</div>
@@ -134,12 +132,5 @@ print(greet("Anirudh"))
 
     <a href="blogs.html" class="back-link">← Back to Blogs</a>
   </main>
-
-  <script>
-    fetch("header.html")
-      .then(r => r.text())
-      .then(html => document.getElementById("header-placeholder").innerHTML = html)
-      .catch(err => console.error("Header load failed:", err));
-  </script>
 </body>
 </html>
