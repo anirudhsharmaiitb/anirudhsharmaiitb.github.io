@@ -1,0 +1,25 @@
+/* Make homepage non-scrollable */
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  /* Homepage styling */
+  h1 {
+    font-weight: 600;
+  }
+  
+  .btn {
+    font-size: 1.1rem;
+    padding: 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: black;
+    color: white;
+  }
+  
